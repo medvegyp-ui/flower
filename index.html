@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Írországi virágtár</title>
+<meta name="description" content="Írországi vad- és kerti virágok gyűjtése fotókkal, dáliatípusokkal és sziluett-kártyákkal.">
+<meta name="theme-color" content="#2c6a4e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Virágtár">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Young+Serif&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div class="wrap">
+  <h1>Írországi virágtár</h1>
+  <div class="tabs" id="tabs"></div>
+  <div class="filters" id="filters"></div>
+  <input class="search" id="q" type="search" placeholder="Keresés név vagy latin név szerint" aria-label="Keresés">
+
+  <div class="bar"><i id="bar"></i></div>
+</div></header>
+<main class="wrap" id="main"></main>
+<div class="fabs">
+  <label class="fab" for="cam" data-pick=""><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.5-2h7L17 8h3v11H4z"/><circle cx="12" cy="13.5" r="3.5"/></svg>Fotózás</label>
+  <label class="fab alt" for="file" data-pick=""><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Galéria</label>
+</div>
+<input type="file" id="file" accept="image/*" style="position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none">
+<input type="file" id="cam" accept="image/*" capture="environment" style="position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none">
+<input type="file" id="imp" accept="application/json,.json" style="position:fixed;left:0;top:0;width:1px;height:1px;opacity:0;pointer-events:none">
+<div id="layer"></div>
+<script src="species.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
